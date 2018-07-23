@@ -18,7 +18,7 @@ import { GatsbyLogo } from '../../components';
 
 const images = {
   intro: require('./assets/cover-optimized.jpg'),
-  me: require('./assets/me-optimized.png')
+  me: require('./assets/me-optimized.jpg')
 };
 
 preloader(images);
