@@ -2,12 +2,15 @@ import React, { Component } from 'react';
 
 import { Deck } from 'spectacle';
 import 'prismjs/components/prism-typescript';
+import Particles from '@dschau/particles.js';
 
 import createTheme from 'spectacle/lib/themes/default';
 import makeSlides from './slides';
+import particlesConfig from './particles-config';
 
 // Require CSS
 require('normalize.css');
+require('./index.css');
 
 const theme = createTheme(
   {
@@ -27,6 +30,13 @@ const theme = createTheme(
 );
 
 export default class Presentation extends Component {
+  componentDidMount() {
+    requestAnimationFrame(() => {
+      document.querySelector('.spectacle-slide').id = 'spectacle-slide';
+      Particles('spectacle-slide', particlesConfig);
+    });
+  }
+
   render() {
     return (
       <Deck

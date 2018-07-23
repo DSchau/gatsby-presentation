@@ -17,6 +17,10 @@
     lodash "^4.2.0"
     to-fast-properties "^2.0.0"
 
+"@dschau/particles.js@~2.0.0":
+  version "2.0.0"
+  resolved "https://registry.yarnpkg.com/@dschau/particles.js/-/particles.js-2.0.0.tgz#7eff39237c4b2528598a344f52372e27c69b6e23"
+
 "@dschau/spectacle-code-slide@~0.5.2":
   version "0.5.2"
   resolved "https://registry.yarnpkg.com/@dschau/spectacle-code-slide/-/spectacle-code-slide-0.5.2.tgz#7df677a69db8d638c9a1a21bf3a30bf6da6a8cc1"

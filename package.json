@@ -4,6 +4,7 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@dschau/particles.js": "~2.0.0",
     "@dschau/spectacle-code-slide": "~0.5.2",
     "lodash.kebabcase": "~4.1.1",
     "marked": "~0.3.19",

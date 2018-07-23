@@ -44,8 +44,8 @@ export const Intro = () => (
       style={{
         display: 'inline-block',
         width: 'auto',
-        backgroundColor: '#663399',
-        color: 'white',
+        backgroundColor: 'white',
+        color: 'rgb(36, 18, 54)',
         padding: '1rem 2rem',
         paddingBottom: '2.25rem'
       }}
@@ -84,8 +84,7 @@ export const Intro = () => (
 );
 
 Intro.Props = {
-  bgImage: images.intro,
-  bgDarken: 0.3,
+  bgColor: 'rgb(36, 18, 54)',
   notes: `
 Hello! My name is Dustin Schau and I hope to share some knowledge with you about... you guessed it, Gatsby!
   `
