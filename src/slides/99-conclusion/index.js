@@ -10,7 +10,7 @@ const images = {
 
 export const Links = () => (
   <div>
-    <Heading size={2} caps>
+    <Heading size={2} caps textColor="white">
       Links
     </Heading>
     <List>
@@ -40,6 +40,8 @@ export const Links = () => (
 );
 
 Links.Props = {
+  bgImage: require('./images/links-optimized.jpg'),
+  bgDarken: 0.5,
   notes: `
 Check out some of these links to view the repos and/or live demonstration sites of the Gatsby functionality!
 
