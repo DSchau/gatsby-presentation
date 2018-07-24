@@ -20,11 +20,11 @@ const Author = ({ author, to: href }) => {
 };
 
 const Quote = ({ quote, ...rest }) => (
-  <BlockQuote>
+  <BlockQuote borderLeft="1px solid white">
     <QuoteComponent
       textColor="white"
-      borderLeft="1px solid white"
       style={{
+        borderLeft: '4px solid white',
         lineHeight: 1.25
       }}
       {...rest}

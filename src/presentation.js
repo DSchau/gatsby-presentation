@@ -4,6 +4,7 @@ import { Deck } from 'spectacle';
 import 'prismjs/components/prism-typescript';
 import Particles from '@dschau/particles.js';
 
+import createHistory from 'history/createBrowserHistory';
 import createTheme from 'spectacle/lib/themes/default';
 import makeSlides from './slides';
 import particlesConfig from './particles-config';
@@ -31,9 +32,22 @@ const theme = createTheme(
 
 export default class Presentation extends Component {
   componentDidMount() {
+    this.history = createHistory();
+
+    this.history.listen(() => {
+      this.addParticles();
+    });
+    
+    this.addParticles();
+  }
+
+  addParticles(hash = window.location.hash) {
     requestAnimationFrame(() => {
-      document.querySelector('.spectacle-slide').id = 'spectacle-slide';
-      Particles('spectacle-slide', particlesConfig);
+      const [,slideHash] = hash.split('/');
+      if (!slideHash || slideHash === '0') {
+        document.querySelector('.spectacle-slide').id = 'spectacle-slide';
+        Particles('spectacle-slide', particlesConfig);
+      } 
     });
   }
 

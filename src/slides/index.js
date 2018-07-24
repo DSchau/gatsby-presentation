@@ -5,12 +5,14 @@ import marked from 'marked';
 import dasherize from 'lodash.kebabcase';
 
 import * as Intro from './01-intro';
-import * as Demo from './02-demo';
-import * as Conclusion from './03-conclusion';
+import * as WhatIsGatsby from './02-what-is-gatsby';
+import * as Demo from './98-demo';
+import * as Conclusion from './99-conclusion';
 
 export default function makeSlides() {
   return [
     Intro,
+    WhatIsGatsby,
     Demo,
     Conclusion
   ].map((Slides, rootIndex) => {
