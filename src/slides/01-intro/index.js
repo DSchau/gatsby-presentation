@@ -44,7 +44,7 @@ export const Intro = () => (
       style={{
         display: 'inline-block',
         width: 'auto',
-        backgroundColor: 'white',
+        backgroundColor: '#fad961',
         color: 'rgb(36, 18, 54)',
         padding: '1rem 2rem',
         paddingBottom: '2.25rem'

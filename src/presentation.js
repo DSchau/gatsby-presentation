@@ -15,9 +15,9 @@ require('./index.css');
 
 const theme = createTheme(
   {
-    primary: '#0A1C28',
-    secondary: '#3FB4C6',
-    tertiary: '#F35B05',
+    primary: 'rgb(36, 18, 54)', // '#0A1C28',
+    secondary: '#fad961', // '#3FB4C6',
+    tertiary: '#ffb238', // 'rgb(74,144,226)', // '#F35B05',
     quartenary: '#F1E4DB'
   },
   {
