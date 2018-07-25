@@ -26,11 +26,6 @@ preloader(images);
 export const Intro = () => (
   <div>
     <div
-      style={{
-        position: 'absolute',
-        bottom: 0,
-        right: 0
-      }}
     >
       <Link
         href="https://www.meetup.com/nebraskajs/events/dxndfdyxhbcb/"
@@ -65,10 +60,7 @@ export const Intro = () => (
     <GatsbyLogo />
     <div
       style={{
-        position: 'absolute',
-        bottom: 0,
-        left: 0,
-        right: 0
+        marginTop: '1rem'
       }}
     >
       <Link
