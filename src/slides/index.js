@@ -5,14 +5,18 @@ import marked from 'marked';
 import dasherize from 'lodash.kebabcase';
 
 import * as Intro from './01-intro';
-import * as WhatIsGatsby from './02-what-is-gatsby';
+import * as BlazingFast from './02-blazing-fast';
+import * as WhatIsAStaticSite from './03-what-is-a-static-site';
+import * as WhatIsReact from './04-what-is-react';
 import * as Demo from './98-demo';
 import * as Conclusion from './99-conclusion';
 
 export default function makeSlides() {
   return [
     Intro,
-    WhatIsGatsby,
+    BlazingFast,
+    WhatIsAStaticSite,
+    WhatIsReact,
     Demo,
     Conclusion
   ].map((Slides, rootIndex) => {

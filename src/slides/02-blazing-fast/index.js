@@ -98,3 +98,7 @@ HowMany.Props = {
   bgImage: 'https://media.giphy.com/media/l41YtZOb9EUABnuqA/giphy.gif',
   bgDarken: 0.5
 };
+
+export const OKTTI = () => (
+  <Heading size={1} caps fit><Span type="underline">T</Span>ime <Span type="underline">T</Span>o <Span type="underline">I</Span>nteractive</Heading>
+);

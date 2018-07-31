@@ -18,7 +18,8 @@ const theme = createTheme(
     primary: 'rgb(36, 18, 54)', // '#0A1C28',
     secondary: '#fad961', // '#3FB4C6',
     tertiary: '#ffb238', // 'rgb(74,144,226)', // '#F35B05',
-    quartenary: '#F1E4DB'
+    quartenary: '#F1E4DB',
+    code: '#2a2734'
   },
   {
     primary: {
