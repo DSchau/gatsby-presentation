@@ -49,7 +49,7 @@ StaticHtml.Props = {
 };
 
 export const OldSiteExample = () => (
-  <Heading size={2}>TODO: Insert classic site everyone recognizes</Heading>
+  <Image src={require('./images/great-gatsby.png')} />
 );
 
 export const StaticHtmlIsHtml = () => (

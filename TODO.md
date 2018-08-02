@@ -1,0 +1,2 @@
+- Spinner slide
+- Show SVG animation

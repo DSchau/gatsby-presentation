@@ -24,7 +24,17 @@ const Grid = styled('div')({
 
 export function BlazingFastSsgReact() {
   return (
-    <Heading size={2} fit textColor="white"><Span type="underline">Blazing-fast</Span> <Span type="underline">static site generator</Span> for <Span type="underline">React</Span></Heading>
+    <div>
+      {
+        ['Blazing fast', 'static site generator', '__for__', 'React']
+          .map(text => {
+            if (text.includes('__')) {
+              return <Heading size={3} textColor="white" key={text}>{text.replace(/_/g, '')}</Heading>;
+            }
+            return <Heading size={1} textColor="white" caps fit key={text}><Span type="underline">{text}</Span></Heading>
+          })
+      }
+    </div>
   );
 }
 
@@ -99,6 +109,4 @@ HowMany.Props = {
   bgDarken: 0.5
 };
 
-export const OKTTI = () => (
-  <Heading size={1} caps fit><Span type="underline">T</Span>ime <Span type="underline">T</Span>o <Span type="underline">I</Span>nteractive</Heading>
-);
+// TODO: add more data for blazing fast, and how you get it

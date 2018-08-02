@@ -36,7 +36,7 @@ export const PrincipleOfLeastPower = () => (
 export const PrincipleOfLeastPowerReact = () => (
   <React.Fragment>
     <BlockQuote textSize={48}>
-      Any application that can be written <Span type="strikethrough">in JavaScript</Span> for React, will eventually be written <Span type="strikethrough">in JavaScript</Span> for React.
+      Any application that can be written <Span type="strikethrough">in JavaScript</Span> in React, will eventually be written <Span type="strikethrough">in JavaScript</Span> in React.
       <Cite>Me, apparently</Cite>
     </BlockQuote>
   </React.Fragment>
