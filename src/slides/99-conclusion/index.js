@@ -41,6 +41,7 @@ export const Links = () => (
 
 Links.Props = {
   bgImage: require('./images/links-optimized.jpg'),
+  id: 'links',
   bgDarken: 0.5,
   notes: `
 Check out some of these links to view the repos and/or live demonstration sites of the Gatsby functionality!

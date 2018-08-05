@@ -9,7 +9,8 @@ import {
   Image,
   Layout,
   Link,
-  S as Span
+  S as Span,
+  Text
 } from 'spectacle';
 
 import { QuoteSlide, Source } from '../../components';
@@ -107,6 +108,16 @@ export const HowMany = () => (
 HowMany.Props = {
   bgImage: 'https://media.giphy.com/media/l41YtZOb9EUABnuqA/giphy.gif',
   bgDarken: 0.5
+};
+
+export const TTI = () => (
+  <div style={{ position: 'relative', height: '80vh', width: '100vw' }}>
+    <Text style={{ position: 'absolute', bottom: -50, left: -100, padding: '0.5rem', backgroundColor: 'black' }} textColor="white" textSize={20}>Addy Osmani - The Cost of JavaScript 2018</Text>
+  </div>
+);
+
+TTI.Props = {
+  bgImage: 'https://cdn-images-1.medium.com/max/1600/1*ow6eliCJiSeX7-Ri4hOA5Q.gif'
 };
 
 // TODO: add more data for blazing fast, and how you get it

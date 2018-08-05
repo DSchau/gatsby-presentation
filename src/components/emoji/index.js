@@ -1,8 +1,9 @@
 import React from 'react';
 import styled from 'react-emotion';
 
-const Container = styled('span')(
+const Container = styled('div')(
   {
+    display: 'inline-block',
     fontSize: 128
   },
   props => props

@@ -12,6 +12,8 @@ import TwitterIcon from 'react-icons/lib/fa/twitter';
 import GithubIcon from 'react-icons/lib/fa/github';
 import WebsiteIcon from 'react-icons/lib/md/web';
 
+import { Logo as ObjectPartnersLogo } from '@objectpartners/components';
+
 import preloader from 'spectacle/lib/utils/preloader';
 
 import { GatsbyLogo } from '../../components';
@@ -140,4 +142,13 @@ I'm a frontend developer who likes to claim that I specialize in all things Java
 
 I work for an awesome company called Object Partners. We have offices in Minneapolis and Omaha, and about 100 senior developers between both offices.
   `
+};
+
+export const ObjectPartners = () => (
+  <ObjectPartnersLogo style={{ height: 'auto', width: 'auto' }} />
+);
+
+ObjectPartners.Props = {
+  bgImage: require('./assets/objectpartners-optimized.jpg'),
+  bgDarken: 0.5
 };

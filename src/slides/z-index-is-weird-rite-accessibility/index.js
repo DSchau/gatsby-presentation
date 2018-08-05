@@ -9,7 +9,16 @@ const Button = styled('button')({
   padding: '1rem 2rem'
 });
 
-export const Intro = () => (
+export const AccessibilityAndMobile = () => (
+  <Heading size={1} caps fit>Accessibility and Mobile</Heading>
+);
+
+AccessibilityAndMobile.Props = {
+  bgImage: 'https://media.giphy.com/media/EsmlrgWNx5v0Y/giphy.gif',
+  bgDarken: 0.4
+};
+
+export const EverSeenAButton = () => (
   <Button>Ever seen a button?</Button>
 );
 

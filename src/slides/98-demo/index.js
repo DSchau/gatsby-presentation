@@ -1,8 +1,31 @@
 import React from 'react';
-import { Heading, GoToAction, Image, Fill, Layout, Link, S as Span } from 'spectacle';
+import { Heading, GoToAction, Image, Fill, Layout, Link, S as Span, Text } from 'spectacle';
 import styled from 'react-emotion';
 
-import { Button } from '../../components';
+import { Button, Emoji } from '../../components';
+
+export const MidwestJS = () => (
+  <Image src={require('./images/midwestjs-optimized.png')} />
+);
+
+MidwestJS.Props = {
+  bgColor: '#000'
+};
+
+export const MidwestJSLighthouse = () => (
+  <div style={{ position: 'relative' }}>
+    <Image src={require('./images/midwestjs-lighthouse-optimized.png')} />
+    <Emoji ariaLabel="Oh my god" fontSize={256} style={{ position: 'absolute', top: '50%', left: '50%', transform: 'translateY(-50%) translateX(-50%)' }}>😱</Emoji>
+  </div>
+);
+
+MidwestJSLighthouse.Props = {
+  bgColor: '#242424'
+};
+
+export const WeCanDoBetter = () => (
+  <Heading size={2} caps fit>We can do better</Heading>
+);
 
 export const DemoHeading = () => (
   <Heading size={2} caps fit>
@@ -29,6 +52,17 @@ Caveat.Props = {
   bgColor: '#ffd400'
 };
 
+export const NewHotness = () => (
+  <Link href="https://midwestjs.netlify.com" target="_blank" rel="noopener">
+    <Image src={require('./images/new-midwestjs-optimized.png')} style={{ maxHeight: '60vh' }}/>
+    <Text textColor="white">midwestjs.netlify.com</Text>
+  </Link>
+);
+
+NewHotness.Props = {
+  bgColor: 'black'
+};
+
 export const HowDidItGo = () => (
   <React.Fragment>
     <Heading size={2}>Demo went&hellip;</Heading>
@@ -44,7 +78,12 @@ export const HowDidItGo = () => (
 );
 
 export const Well = () => (
-  null
+  <div>
+    <Heading size={2} caps fit textColor="white">omg yes</Heading>
+    <GoToAction render={goTo => (
+      <Fill style={{ margin: '1rem' }}><Button onClick={() => goTo('links')}>➡️</Button></Fill>
+    )} />
+  </div>
 );
 
 Well.Props = {
@@ -53,7 +92,12 @@ Well.Props = {
 };
 
 export const Poorly = () => (
-  null
+  <div>
+    <Heading size={2} caps fit textColor="white">💩 happens</Heading>
+    <GoToAction render={goTo => (
+      <Fill style={{ margin: '1rem' }}><Button onClick={() => goTo('links')}>➡️</Button></Fill>
+    )} />
+  </div>
 );
 
 Poorly.Props = {
