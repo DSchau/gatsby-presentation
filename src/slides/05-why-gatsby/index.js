@@ -1,4 +1,5 @@
 import React from 'react';
+import Player from 'react-player';
 
 import {
   Appear,
@@ -48,4 +49,12 @@ export const PerfScores = () => (
 
 PerfScores.Props = {
   bgColor: '#242424'
-}
+};
+
+export const SvgBlur = () => (
+  <Player url={require('./video/svg-blur.mp4')} height="100%" width="100%" playing={true} loop={true} />
+);
+
+SvgBlur.Props = {
+  bgColor: '#000'
+};

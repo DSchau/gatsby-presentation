@@ -6356,9 +6356,9 @@ react-live@^1.8.0-2:
     prop-types "^15.5.8"
     unescape "^0.2.0"
 
-react-player@~1.5.0:
-  version "1.5.0"
-  resolved "https://registry.yarnpkg.com/react-player/-/react-player-1.5.0.tgz#c7f0b864d8a154797a8f39b0768d16f5a7c22199"
+react-player@~1.6.4:
+  version "1.6.4"
+  resolved "https://registry.yarnpkg.com/react-player/-/react-player-1.6.4.tgz#a7410a23ae849aec1f1854040d3f56ccab054c21"
   dependencies:
     deepmerge "^2.0.1"
     load-script "^1.0.0"
