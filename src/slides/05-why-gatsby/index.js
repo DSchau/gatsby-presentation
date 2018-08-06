@@ -169,18 +169,16 @@ export const BallerThings = class extends React.Component {
 
     context.scale(2, 2);
 
-    this.interval = window.setInterval(() => {
-      this.drawEmoji(context, emoji, maxX, maxY);
-    }, 100);
+    setTimeout(() => {
+      this.interval = window.setInterval(() => {
+        this.drawEmoji(context, emoji, maxX, maxY);
+      }, 250);
+    }, 2000);
   }
 
   componentWillUnmount() {
-    console.log(this.canvas);
-    if (this.canvas && this.canvas.getContext) {
-      const context = this.canvas.getContext('2d');
-
-      context.clearRect(0, 0, this.canvas.width, this.canvas.height);
-    }
+    const context = this.canvas.getContext('2d');
+    context.clearRect(0, 0, this.canvas.width, this.canvas.height);
     window.clearInterval(this.interval);
   }
 
