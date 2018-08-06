@@ -63,3 +63,25 @@ export default function Header() {
 JSX.Props = {
   bgColor: 'code'
 };
+
+export const Components = () => (
+  <CodePane lang="jsx" source={`
+import React from 'react';
+
+import { Content, Footer, Header, Layout } from './components';
+
+function App() {
+  return (
+    <Layout>
+      <Header />
+      <Content />
+      <Footer />
+    </Layout>
+  );  
+}
+  `.trim()} textSize={32} />
+);
+
+Components.Props = {
+  bgColor: 'code'
+};

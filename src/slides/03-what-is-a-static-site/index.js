@@ -32,11 +32,6 @@ export const StaticHtml = () => (
   <main>
     <p>This content is mind blowing</p>
   </main>
-  <nav>
-    <ul>
-      <li><a href="/something-else">Sup</a></li>
-    </ul>
-  </nav>
   <footer>
     <p>Copyright &copy; 2018</p>
   </footer>

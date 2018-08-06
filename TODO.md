@@ -13,3 +13,5 @@
 ## Misc
 
 - Optimize .png images
+- Tweak color scheme
+- Tweak code color scheme for contrast

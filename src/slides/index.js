@@ -10,6 +10,7 @@ import * as BlazingFast from './02-blazing-fast';
 import * as WhatIsAStaticSite from './03-what-is-a-static-site';
 import * as WhatIsReact from './04-what-is-react';
 import * as WhyGatsby from './05-why-gatsby';
+import * as Alternatives from './06-alternatives';
 import * as Demo from './98-demo';
 import * as Conclusion from './99-conclusion';
 
@@ -21,6 +22,7 @@ export default function makeSlides() {
     WhatIsAStaticSite,
     WhatIsReact,
     WhyGatsby,
+    Alternatives,
     Demo,
     Conclusion
   ].map((Slides, rootIndex) => {
