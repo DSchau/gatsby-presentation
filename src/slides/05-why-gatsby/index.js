@@ -6,6 +6,7 @@ import {
   Appear,
   BlockQuote,
   Cite,
+  Code,
   CodePane,
   Quote,
   Heading,
@@ -66,16 +67,39 @@ export const ReasonCodeSplitting = () => (
 );
 
 export const RouteExample = () => (
-  <CodePane lang="markup" source={`
-src/
-  pages/
-    about.js
-    contact.js
-    index.js
-  `.trim()} textSize={32} textColor="white" />
+  <CodePane theme="external" lang="markup" source={`
+ src
+ ├── pages
+ │   ├── 404.js
+ │   ├── contact.js
+ │   ├── index.js
+ │   └── sponsors.js
+  `.trim()} textSize={40} textColor="white" />
 );
 
 RouteExample.Props = {
+  bgColor: 'code'
+};
+
+export const RouteComponentExample = () => (
+  <div>
+    <Heading size={2}><Code textColor="white">src/pages/contact.js</Code></Heading>
+    <CodePane theme="external" lang="jsx" source={`
+import React from 'react';
+import { Formik } from 'formik';
+import yup from 'yup';
+
+export default function ContactPage() {
+  // you get the idea
+  return (
+    <Formik yadda={true} yaddaYadda={true} />
+  );
+}
+    `.trim()} textSize={32} />
+  </div>
+);
+
+RouteComponentExample.Props = {
   bgColor: 'code'
 };
 
@@ -84,10 +108,11 @@ export const InlineCriticalResources = () => (
 );
 
 export const HeadTags = () => (
-  <CodePane lang="markup" source={`
+  <CodePane theme="external" lang="markup" source={`
 <head>
- <link rel="preload" src="/scripts/1234asdf.js" />
- <link rel="preload" src="/scripts/5678ghij.js" />
+  <link as="script" rel="preload" href="/component---src-pages-index-js-5de4c012fea4ea10dce2.js">
+  <link as="script" rel="preload" href="/app-aa6a148b9c4dacefce69.js">
+  <link as="script" rel="preload" href="/webpack-runtime-f40cea91916f666a30a0.js">
 </head>
   `.trim()} textSize={32} />
 );

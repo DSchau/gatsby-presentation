@@ -47,7 +47,7 @@ export const TheKeyAbstraction = () => (
 );
 
 export const JSX = () => (
-  <CodePane lang="jsx" source={`
+  <CodePane theme="external" lang="jsx" source={`
 import React from 'react';
 
 export default function Header() {
@@ -65,18 +65,16 @@ JSX.Props = {
 };
 
 export const Components = () => (
-  <CodePane lang="jsx" source={`
+  <CodePane theme="external" lang="jsx" source={`
 import React from 'react';
 
-import { Content, Footer, Header, Layout } from './components';
+import { Content, Footer, Header } from './components';
 
 function App() {
   return (
-    <Layout>
-      <Header />
-      <Content />
-      <Footer />
-    </Layout>
+    <Header />
+    <Content />
+    <Footer />
   );  
 }
   `.trim()} textSize={32} />

@@ -24,7 +24,7 @@ Intro.Props = {
 };
 
 export const StaticHtml = () => (
-  <CodePane lang="html" source={`
+  <CodePane theme="external" lang="html" source={`
 <body>
   <header>
     <h1>Remember HTML? Pepperidge Farm Remembers</h1>

@@ -25,7 +25,7 @@ export const EverSeenAButton = () => (
 export const MeToo = () => (
   <div>
     <Button>same</Button>
-    <CodePane style={{ marginTop: '1rem' }} lang="html" source={`
+    <CodePane theme="external" style={{ marginTop: '1rem' }} lang="html" source={`
 <a class="button">same</a>
     `.trim()} textSize={32} />
   </div>

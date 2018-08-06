@@ -19,7 +19,7 @@ const theme = createTheme(
     secondary: '#fad961', // '#3FB4C6',
     tertiary: '#ffb238', // 'rgb(74,144,226)', // '#F35B05',
     quartenary: '#F1E4DB',
-    code: '#2a2734'
+    code: '#1d1f21'
   },
   {
     primary: {
