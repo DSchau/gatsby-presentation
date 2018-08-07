@@ -45,12 +45,23 @@ BlazingFastSsgReact.Props = {
 };
 
 export const BlazingFast = () => (
-  <Heading size={1} fit>Blazing-fast</Heading>
+  <div>
+    <Heading size={1} caps fit textColor="#ff7400">Blazing</Heading>
+    <Heading size={1} caps fit textColor="black">Fast</Heading>
+  </div>
 );
+
+BlazingFast.Props = {
+  bgColor: 'white'
+}
 
 export const BlazingFastQuote = () => (
   <QuoteSlide author="Andrew Clark" href="https://twitter.com/acdlite/status/974390255393505280?lang=en" image={require('./images/andrew-clark-optimized.jpg')} quote={`Tip when evaluating libraries: check if it's blazing fast. If it's fast, but the README doesn't specify whether its fastness is blazing, keep searching. Often you can find a similar library that does the same thing, but blazingly. Blazing means good.`.trim()} />
 );
+
+BlazingFastQuote.Props = {
+  bgColor: 'black'
+};
 
 export const BlazingMeansGood = () => (
   <Quote style={{ borderLeftWidth: 4 }}>Blazing means good.</Quote>
@@ -105,10 +116,30 @@ export const HowMany = () => (
   <Heading size={2} fit textColor="white">How many do you actually <Span type="italic">know?</Span></Heading>
 );
 
+export const UsingThePlatformIsHard = () => (
+  <div>
+    <Heading size={1} caps fit textColor="black"><Span type="italic">Using the platform</Span></Heading>
+    <Heading size={3} caps textColor="black">is</Heading>
+    <Heading size={1} caps fit textColor="black"><Span type="underline">exhausting</Span></Heading>
+    <Text>(but generally worth it, don't @ me)</Text>
+  </div>
+);
+
+UsingThePlatformIsHard.Props = {
+  bgColor: 'white'
+};
+
 HowMany.Props = {
   bgImage: 'https://media.giphy.com/media/l41YtZOb9EUABnuqA/giphy.gif',
   bgDarken: 0.5
 };
+
+export const OneKeyMetric = () => (
+  <div>
+    <Heading size={1} caps fit><Span type="italic">Having said that</Span></Heading>
+    <Heading size={2} caps fit>One key metric</Heading>
+  </div>
+);
 
 export const TTI = () => (
   <div style={{ position: 'relative', height: '80vh', width: '100vw' }}>

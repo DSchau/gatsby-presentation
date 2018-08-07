@@ -13,11 +13,24 @@ import {
   Fill,
   Image,
   Layout,
+  List,
+  ListItem,
   Link,
-  S as Span
+  S as Span,
+  Text
 } from 'spectacle';
 
+import { Emoji } from '../../components';
+
 import './index.css';
+
+const Grid = styled('div')({
+  display: 'grid',
+  gridTemplateColumns: '100%',
+  '@media only screen and (min-width: 768px)': {
+    gridTemplateColumns: '50% 50%'
+  }
+});
 
 export const Intro = () => (
   <div>
@@ -25,6 +38,19 @@ export const Intro = () => (
     <Heading size={1} caps fit><Span type="italic">Why?</Span></Heading>
   </div>
 );
+
+export const KyleMatthewsHardToScrewUp = () => (
+  <React.Fragment>
+    <BlockQuote textSize={64} textColor="white">
+    I designed Gatsby with the goal that when using it, it'd be really hard to build a slow site.
+      <Cite>Kyle Matthews (Creator of Gatsby)</Cite>
+    </BlockQuote>
+  </React.Fragment>
+);
+
+KyleMatthewsHardToScrewUp.Props = {
+  bgColor: 'black'
+};
 
 export const BlazingByDefault = () => (
   <div>
@@ -103,6 +129,19 @@ RouteComponentExample.Props = {
   bgColor: 'code'
 };
 
+export const StopCreatingMassiveBundles = () => (
+  <div>
+    <Heading size={1} caps fit textColor="black">Stop</Heading>
+    <Heading size={1} caps fit textColor="black">Creating</Heading>
+    <Heading size={1} caps fit textColor="black">Massive bundles</Heading>
+    <Text fit>(or you do you, I'm just some guy&mdash;not your boss)</Text>
+  </div>
+);
+
+StopCreatingMassiveBundles.Props = {
+  bgColor: 'white'
+};
+
 export const InlineCriticalResources = () => (
   <Heading size={2} caps fit>Inlining of Critical Resources</Heading>
 );
@@ -141,7 +180,13 @@ SvgBlur.Props = {
   bgColor: '#000'
 };
 
-// TODO: add svg blur-up animation
+export const GatsbySvgBlur = () => (
+  <Player url={require('./video/gatsby-svg-blur.mp4')} height="100%" width="100%" playing={true} loop={true} />
+);
+
+GatsbySvgBlur.Props = {
+  bgColor: '#000'
+};
 
 // TODO: add svg blur up for people
 
@@ -155,12 +200,84 @@ export const GatsbyImage = () => (
 
 export const GraphQL = () => (
   <div>
-    <Heading size={1} fit caps>Yup</Heading>
+    <Heading size={1} fit caps>Yup.</Heading>
     <Heading size={2} fit caps>GraphQL</Heading>
   </div>
 );
 
-// TODO: add GraphiQL example
+export const GraphiQLExample = () => (
+  <Image src={require('./images/graphql.png')} />
+);
+
+GraphiQLExample.Props = {
+  bgColor: 'black'
+};
+
+export const Plugins = () => (
+  <div>
+    <Heading size={1} caps fit>Plugins</Heading>
+    <Heading size={2} caps fit>give Gatsby superpowers</Heading>
+  </div>
+);
+
+Plugins.Props = {
+  bgImage: require('./images/plugins-optimized.jpg'),
+  bgDarken: 0.5
+};
+
+export const CentralTypes = () => (
+  <div>
+    <Heading size={2} caps fit textColor="white">Functional</Heading>
+    <Heading size={2} caps fit textColor="white">Source</Heading>
+    <Heading size={2}><Span type="italic"textFont="Baskerville">&amp;</Span></Heading>
+    <Heading size={2} caps fit textColor="white">Transformers</Heading>
+  </div>
+);
+
+export const FunctionalPlugins = () => (
+  <div>
+    <Heading size={2} caps fit textColor="white">Functional</Heading>
+    <List>
+      {
+        ['gatsby-plugin-offline', 'gatsby-plugin-react-helmet', 'gatsby-plugin-manifest', 'gatsby-plugin-typography']
+          .map(plugin => (
+            <ListItem textColor="white" key={plugin}>{plugin}</ListItem>
+          ))
+      }
+    </List>
+    <Image src={require('./images/gatsby-plugin.png')} />
+  </div>
+);
+
+export const SourcePlugins = () => (
+  <div>
+    <Heading size={2} caps fit textColor="white">source</Heading>
+    <List>
+      {
+        ['gatsby-source-filesystem', 'gatsby-source-wordpress', 'gatsby-source-contentful', 'gatsby-source-github']
+          .map(plugin => (
+            <ListItem textColor="white" key={plugin}>{plugin}</ListItem>
+          ))
+      }
+    </List>
+    <Image src={require('./images/gatsby-source.png')} />
+  </div>
+);
+
+export const TransformerPlugins = () => (
+  <div>
+    <Heading size={2} caps fit textColor="white">transformer</Heading>
+    <List>
+      {
+        ['gatsby-transformer-remark', 'gatsby-transformer-sharp', 'gatsby-transformer-json', 'gatsby-transformer-yaml']
+          .map(plugin => (
+            <ListItem textColor="white" key={plugin}>{plugin}</ListItem>
+          ))
+      }
+    </List>
+    <Image src={require('./images/gatsby-transformer.png')} />
+  </div>
+);
 
 const Canvas = styled('canvas')({
   position: 'absolute',

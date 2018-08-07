@@ -9,6 +9,7 @@
 - Show gatsby source plugins
 - Show gatsby plugins
 - Show GraphQL
+- Add contributor swag plug
 
 ## Misc
 

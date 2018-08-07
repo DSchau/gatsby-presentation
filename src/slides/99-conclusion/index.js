@@ -8,6 +8,19 @@ const images = {
   thankYou: 'https://media.giphy.com/media/KJ1f5iTl4Oo7u/giphy.gif'
 };
 
+export const PerfMatters = () => (
+  <div>
+    <Heading size={1} caps fit textColor="white">Perf.</Heading>
+    <Heading size={1} caps fit textColor="white">Matters</Heading>
+    <Heading size={2} fit textColor="white">(aka give a shit)</Heading>
+  </div>
+);
+
+PerfMatters.Props = {
+  id: 'performance-matters',
+  bgColor: 'black'
+};
+
 export const Links = () => (
   <div>
     <Heading size={2} caps textColor="white">

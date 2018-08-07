@@ -4,6 +4,13 @@ import styled from 'react-emotion';
 
 import { Button, Emoji } from '../../components';
 
+export const LetsGetReal = () => (
+  <div>
+    <Heading size={2} caps fit>Real talk</Heading>
+    <Text textColor="secondary" fit>(just for a bit, this is a safe place)</Text>
+  </div>
+);
+
 export const MidwestJS = () => (
   <Image src={require('./images/midwestjs-optimized.png')} />
 );
@@ -43,8 +50,8 @@ I've created (and open sourced!) some demos and repositories to illustrate some 
 
 export const Caveat = () => (
   <React.Fragment>
-    <Heading size={2} caps fit textColor="black">This is <Span type="italic">beta</Span> software</Heading>
-    <Heading size={6} textColor="black" style={{ marginTop: '4rem' }}>There <Span type="italic">might</Span> be 🐉</Heading>
+    <Heading size={2} caps fit textColor="black"><Span type="italic">beta</Span> software</Heading>
+    <Heading size={6} fit textColor="black" style={{ marginTop: '4rem' }}>There <Span type="italic">might</Span> be 🐉</Heading>
   </React.Fragment>
 );
 
@@ -81,7 +88,7 @@ export const Well = () => (
   <div>
     <Heading size={2} caps fit textColor="white">omg yes</Heading>
     <GoToAction render={goTo => (
-      <Fill style={{ margin: '1rem' }}><Button onClick={() => goTo('links')}>➡️</Button></Fill>
+      <Fill style={{ margin: '1rem' }}><Button onClick={() => goTo('performance-matters')}>➡️</Button></Fill>
     )} />
   </div>
 );
@@ -93,9 +100,9 @@ Well.Props = {
 
 export const Poorly = () => (
   <div>
-    <Heading size={2} caps fit textColor="white">💩 happens</Heading>
+    <Heading size={2} caps fit textColor="white">🚨 💩 happens 🚨</Heading>
     <GoToAction render={goTo => (
-      <Fill style={{ margin: '1rem' }}><Button onClick={() => goTo('links')}>➡️</Button></Fill>
+      <Fill style={{ margin: '1rem' }}><Button onClick={() => goTo('performance-matters')}>➡️</Button></Fill>
     )} />
   </div>
 );

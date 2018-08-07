@@ -10,17 +10,20 @@ const Button = styled('button')({
 });
 
 export const AccessibilityAndMobile = () => (
-  <Heading size={1} caps fit>Accessibility and Mobile</Heading>
+  <Heading size={1} caps fit textColor="black">Accessibility and Mobile</Heading>
 );
 
 AccessibilityAndMobile.Props = {
-  bgImage: 'https://media.giphy.com/media/EsmlrgWNx5v0Y/giphy.gif',
-  bgDarken: 0.4
+  bgImage: 'https://media.giphy.com/media/2H67VmB5UEBmU/giphy.gif'
 };
 
 export const EverSeenAButton = () => (
-  <Button>Ever seen a button?</Button>
-);
+    <div>
+      <Button>Ever seen a button?</Button>
+      <CodePane theme="external" style={{ marginTop: '1rem' }} lang="html" source={`
+  <button>Ever seen a button?</button>
+      `.trim()} textSize={32} />
+    </div>);
 
 export const MeToo = () => (
   <div>

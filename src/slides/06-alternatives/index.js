@@ -12,7 +12,8 @@ import {
   Image,
   Layout,
   Link,
-  S as Span
+  S as Span,
+  Text
 } from 'spectacle';
 
 const Grid = styled('div')({
@@ -24,7 +25,10 @@ const Grid = styled('div')({
 });
 
 export const Intro = () => (
-  <Heading size={1} caps fit>Alternatives</Heading>
+  <div>
+    <Heading size={1} caps fit>Alternatives</Heading>
+    <Text textColor="secondary">(Yes, I'm a fanboy, but they do exist)</Text>
+  </div>
 );
 
 export const TwoCamps = () => (

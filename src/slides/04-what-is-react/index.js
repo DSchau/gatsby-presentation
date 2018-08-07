@@ -11,7 +11,8 @@ import {
   Image,
   Layout,
   Link,
-  S as Span
+  S as Span,
+  Text
 } from 'spectacle';
 
 import { ReactLogo } from '../../components';
@@ -26,21 +27,40 @@ Intro.Props = {
 
 export const PrincipleOfLeastPower = () => (
   <React.Fragment>
-    <BlockQuote textSize={48}>
+    <BlockQuote textSize={64} textColor="white">
       Any application that can be written in JavaScript, will eventually be written in JavaScript.
       <Cite>Jeff Atwood</Cite>
     </BlockQuote>
   </React.Fragment>
 );
 
+PrincipleOfLeastPower.Props = {
+  bgColor: 'black'
+};
+
 export const PrincipleOfLeastPowerReact = () => (
   <React.Fragment>
-    <BlockQuote textSize={48}>
+    <BlockQuote textSize={64} textColor="white">
       Any application that can be written <Span type="strikethrough">in JavaScript</Span> in React, will eventually be written <Span type="strikethrough">in JavaScript</Span> in React.
       <Cite>Me, apparently</Cite>
     </BlockQuote>
   </React.Fragment>
 );
+
+PrincipleOfLeastPowerReact.Props = {
+  bgColor: 'black'
+};
+
+export const FrameworkComparison = () => (
+  <div style={{ position: 'relative', height: '80vh', width: '100%' }}>
+    <Text style={{ position: 'absolute', bottom: -50, left: '50%', transform: 'translateX(-50%)', padding: '0.5rem', backgroundColor: 'black', whiteSpace: 'nowrap' }} textColor="white" textSize={20}>Laurie Voss - npm and the future of JavaScript</Text>
+    <Image src={require('./images/frontend-frameworks.png')} />
+  </div>
+);
+
+FrameworkComparison.Props = {
+  bgColor: 'white'
+};
 
 export const TheKeyAbstraction = () => (
   <Heading size={2} fit caps>One <Span type="italic">key</Span> abstraction</Heading>
@@ -53,7 +73,7 @@ import React from 'react';
 export default function Header() {
   return (
     <header>
-      <h1>Remember HTML? Pepperidge Farm Remembers</h1>
+      <h1>Remember ~~HTML~~ JSX? Pepperidge Farm Remembers</h1>
     </header>
   );
 }
