@@ -74,7 +74,7 @@ LighthouseLogo.Props = {
 };
 
 export const PerfScores = () => (
-  <Image src={require('./images/lighthouse-optimized.png')} />
+  <Image src={require('./images/lighthouse-optimized.jpg')} />
 );
 
 PerfScores.Props = {
@@ -206,10 +206,23 @@ export const GraphQL = () => (
 );
 
 export const GraphiQLExample = () => (
-  <Image src={require('./images/graphql.png')} />
+  <Image src={require('./images/graphql-optimized.jpg')} />
 );
 
 GraphiQLExample.Props = {
+  bgColor: 'black'
+};
+
+export const GraphqlQueryShitYo = () => (
+  <React.Fragment>
+    <BlockQuote textSize={64} textColor="white">
+      GraphQL is the best way to query shit, yo.
+      <Cite>Mikhail Novikov</Cite>
+    </BlockQuote>
+  </React.Fragment>
+);
+
+GraphqlQueryShitYo.Props = {
   bgColor: 'black'
 };
 
@@ -245,7 +258,7 @@ export const FunctionalPlugins = () => (
           ))
       }
     </List>
-    <Image src={require('./images/gatsby-plugin.png')} />
+    <Image src={require('./images/gatsby-plugin-optimized.jpg')} />
   </div>
 );
 
@@ -260,7 +273,7 @@ export const SourcePlugins = () => (
           ))
       }
     </List>
-    <Image src={require('./images/gatsby-source.png')} />
+    <Image src={require('./images/gatsby-source-optimized.jpg')} />
   </div>
 );
 
@@ -275,7 +288,7 @@ export const TransformerPlugins = () => (
           ))
       }
     </List>
-    <Image src={require('./images/gatsby-transformer.png')} />
+    <Image src={require('./images/gatsby-transformer-optimized.jpg')} />
   </div>
 );
 

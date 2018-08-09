@@ -47,7 +47,7 @@ StaticHtml.Props = {
 };
 
 export const OldSiteExample = () => (
-  <Image src={require('./images/great-gatsby.png')} />
+  <Image src={require('./images/great-gatsby-optimized.jpg')} />
 );
 
 OldSiteExample.Props = {

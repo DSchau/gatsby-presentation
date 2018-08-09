@@ -76,7 +76,7 @@ export const AlrightHow = () => (
 );
 
 export const PerformanceTips = () => (
-  <Image src={require('./images/performance-optimized.png')} />
+  <Image src={require('./images/performance-optimized.jpg')} />
 );
 
 PerformanceTips.Props = {

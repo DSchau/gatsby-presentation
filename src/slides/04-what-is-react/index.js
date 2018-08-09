@@ -54,7 +54,7 @@ PrincipleOfLeastPowerReact.Props = {
 export const FrameworkComparison = () => (
   <div style={{ position: 'relative', height: '80vh', width: '100%' }}>
     <Text style={{ position: 'absolute', bottom: -50, left: '50%', transform: 'translateX(-50%)', padding: '0.5rem', backgroundColor: 'black', whiteSpace: 'nowrap' }} textColor="white" textSize={20}>Laurie Voss - npm and the future of JavaScript</Text>
-    <Image src={require('./images/frontend-frameworks.png')} />
+    <Image src={require('./images/frontend-frameworks-optimized.jpg')} />
   </div>
 );
 
