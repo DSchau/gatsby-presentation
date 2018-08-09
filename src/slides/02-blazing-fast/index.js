@@ -13,7 +13,7 @@ import {
   Text
 } from 'spectacle';
 
-import { QuoteSlide, Source } from '../../components';
+import { Emoji, QuoteSlide, Source } from '../../components';
 
 const Grid = styled('div')({
   display: 'grid',
@@ -42,6 +42,27 @@ export function BlazingFastSsgReact() {
 BlazingFastSsgReact.Props = {
   bgImage: require('./images/blazing-fast-optimized.jpg'),
   bgDarken: 0.5
+};
+
+export const ReactDocs = () => (
+  <Image src={require('./images/reactjs-optimized.jpg')} />
+);
+
+ReactDocs.Props = {
+  bgColor: 'black'
+};
+
+export const Stats = () => (
+  <div>
+    <Heading size={1} caps fit textColor="black">Statistics</Heading>
+    <Heading size={2} caps textColor="black" style={{ marginBottom: '1rem' }}>~24K <Emoji ariaLabel="Github stars">⭐</Emoji></Heading>
+    <Heading size={2} caps textColor="black" style={{ marginBottom: '1rem' }}>~1000 <Emoji ariaLabel="Contributors">👤</Emoji></Heading>
+    <Heading size={2} caps textColor="black">~500K <Emoji ariaLabel="Downloads">📈</Emoji></Heading>
+  </div>
+);
+
+Stats.Props = {
+  bgColor: 'white'
 };
 
 export const BlazingFast = () => (

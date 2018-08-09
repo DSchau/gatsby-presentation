@@ -35,7 +35,7 @@ const Grid = styled('div')({
 export const Intro = () => (
   <div>
     <Heading size={2} caps fit>OK. Great!</Heading>
-    <Heading size={1} caps fit><Span type="italic">Why?</Span></Heading>
+    <Heading size={1} caps fit><Span type="italic">How?</Span></Heading>
   </div>
 );
 
@@ -129,18 +129,18 @@ RouteComponentExample.Props = {
   bgColor: 'code'
 };
 
-export const StopCreatingMassiveBundles = () => (
-  <div>
-    <Heading size={1} caps fit textColor="black">Stop</Heading>
-    <Heading size={1} caps fit textColor="black">Creating</Heading>
-    <Heading size={1} caps fit textColor="black">Massive bundles</Heading>
-    <Text fit>(or you do you, I'm just some guy&mdash;not your boss)</Text>
-  </div>
-);
+// export const StopCreatingMassiveBundles = () => (
+//   <div>
+//     <Heading size={1} caps fit textColor="black">Stop</Heading>
+//     <Heading size={1} caps fit textColor="black">Creating</Heading>
+//     <Heading size={1} caps fit textColor="black">Massive bundles</Heading>
+//     <Text fit>(or you do you, I'm just some guy&mdash;not your boss)</Text>
+//   </div>
+// );
 
-StopCreatingMassiveBundles.Props = {
-  bgColor: 'white'
-};
+// StopCreatingMassiveBundles.Props = {
+//   bgColor: 'white'
+// };
 
 export const InlineCriticalResources = () => (
   <Heading size={2} caps fit>Inlining of Critical Resources</Heading>
@@ -198,12 +198,17 @@ export const GatsbyImage = () => (
   </div>
 );
 
-export const GraphQL = () => (
+export const Blockchain = () => (
   <div>
-    <Heading size={1} fit caps>Yup.</Heading>
-    <Heading size={2} fit caps>GraphQL</Heading>
+    <Heading size={1} fit caps>and also&hellip;</Heading>
+    <Heading size={2} fit caps textColor="white">Blockchain</Heading>
   </div>
 );
+
+Blockchain.Props = {
+  bgImage: require('./images/blockchain-optimized.jpg'),
+  bgDarken: 0.5
+};
 
 export const GraphiQLExample = () => (
   <Image src={require('./images/graphql-optimized.jpg')} />
@@ -291,6 +296,27 @@ export const TransformerPlugins = () => (
     <Image src={require('./images/gatsby-transformer-optimized.jpg')} />
   </div>
 );
+
+export const SourceExamples = () => (
+  <div>
+    <Heading size={2} caps fit textColor="black">Source examples</Heading>
+    <Layout>
+      <Fill><Link href="https://speaker-signup.netlify.com" target="_blank" rel="noopener">
+        <Image src={require('./images/speaker-signup-optimized.jpg')} />
+      </Link></Fill>
+      <Fill><Link href="https://blog.dustinschau.com" target="_blank" rel="noopener">
+        <Image src={require('./images/blog-optimized.jpg')} />
+      </Link></Fill>
+      <Fill><Link href="https://photos.maggieanddustin.com" target="_blank" rel="noopener">
+        <Image src={require('./images/photos-maggie-and-dustin-optimized.jpg')} />
+      </Link></Fill>
+    </Layout>
+  </div>
+);
+
+SourceExamples.Props = {
+  bgColor: 'white'
+};
 
 const Canvas = styled('canvas')({
   position: 'absolute',

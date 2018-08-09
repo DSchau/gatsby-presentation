@@ -12,7 +12,7 @@ export const LetsGetReal = () => (
 );
 
 export const MidwestJS = () => (
-  <Image src={require('./images/midwestjs-optimized.png')} />
+  <Image src={require('./images/midwestjs-optimized.jpg')} />
 );
 
 MidwestJS.Props = {
@@ -21,13 +21,21 @@ MidwestJS.Props = {
 
 export const MidwestJSLighthouse = () => (
   <div style={{ position: 'relative' }}>
-    <Image src={require('./images/midwestjs-lighthouse-optimized.png')} />
+    <Image src={require('./images/midwestjs-lighthouse-optimized.jpg')} />
     <Emoji ariaLabel="Oh my god" fontSize={256} style={{ position: 'absolute', top: '50%', left: '50%', transform: 'translateY(-50%) translateX(-50%)' }}>😱</Emoji>
   </div>
 );
 
 MidwestJSLighthouse.Props = {
   bgColor: '#242424'
+};
+
+export const WebpageTestResults = () => (
+  <Image src={require('./images/midwestjs-perf-optimized.jpg')} />
+);
+
+WebpageTestResults.Props = {
+  bgColor: '#181741'
 };
 
 export const WeCanDoBetter = () => (
@@ -61,7 +69,7 @@ Caveat.Props = {
 
 export const NewHotness = () => (
   <Link href="https://midwestjs.netlify.com" target="_blank" rel="noopener">
-    <Image src={require('./images/new-midwestjs-optimized.png')} style={{ maxHeight: '60vh' }}/>
+    <Image src={require('./images/new-midwestjs-optimized.jpg')} style={{ maxHeight: '60vh' }}/>
     <Text textColor="white">midwestjs.netlify.com</Text>
   </Link>
 );

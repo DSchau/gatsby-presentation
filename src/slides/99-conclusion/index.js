@@ -28,6 +28,7 @@ export const Links = () => (
     </Heading>
     <List>
       {[
+        ['The Cost of JavaScript in 2018', 'https://medium.com/@addyosmani/the-cost-of-javascript-in-2018-7d8950fbb5d4']
       ].map(([title, href]) => {
         const Icon = href.includes('github.com') ? GithubIcon : WebsiteIcon;
         return (

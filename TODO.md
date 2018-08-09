@@ -12,5 +12,5 @@
 
 ## Misc
 
-- Optimize .png images
 - Tweak color scheme
+- Add links
