@@ -47,7 +47,7 @@ export const Static = () => (
     <Heading size={2} caps textColor="black" style={{ marginBottom: '2rem' }}>Static</Heading>
     <Grid>
       {
-        [require('./images/react-static.png'), require('./images/vuepress.png'), require('./images/sapper.png'), require('./images/11ty.png'), require('./images/jekyll.png')]
+        [require('./images/react-static.png'), require('./images/vuepress.png'), require('./images/sapper.png'), require('./images/hugo-logo-optimized.png'), require('./images/11ty.png'), require('./images/jekyll.png')]
           .map(src => (
             <Image src={src} key={src} style={{ height: 200 }} />
           ))
