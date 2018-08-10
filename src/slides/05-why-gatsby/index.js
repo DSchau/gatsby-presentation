@@ -201,7 +201,7 @@ export const GatsbyImage = () => (
 export const Blockchain = () => (
   <div>
     <Heading size={1} fit caps>and also&hellip;</Heading>
-    <Heading size={2} fit caps textColor="white">Blockchain</Heading>
+    <Heading size={2} fit caps textColor="white">Blockchain!!111</Heading>
   </div>
 );
 
@@ -318,70 +318,70 @@ SourceExamples.Props = {
   bgColor: 'white'
 };
 
-const Canvas = styled('canvas')({
-  position: 'absolute',
-  top: 0,
-  left: 0,
-  right: 0,
-  bottom: 0
-});
+// const Canvas = styled('canvas')({
+//   position: 'absolute',
+//   top: 0,
+//   left: 0,
+//   right: 0,
+//   bottom: 0
+// });
 
-export const BallerThings = class extends React.Component {
-  componentDidMount() {
-    const emoji = ['⚽', '🏀', '🏈', '⚾', '🎾', '🏐', '🏉', '🎱', '🔮'];
+// export const BallerThings = class extends React.Component {
+//   componentDidMount() {
+//     const emoji = ['⚽', '🏀', '🏈', '⚾', '🎾', '🏐', '🏉', '🎱', '🔮'];
 
-    const maxX = window.innerWidth;
-    const maxY = window.innerHeight;
+//     const maxX = window.innerWidth;
+//     const maxY = window.innerHeight;
 
-    const canvas = document.createElement('canvas');
-    canvas.className = 'balls-canvas';
-    canvas.width = maxX * 2;
-    canvas.height = maxY * 2;
-    canvas.style.width = maxX;
-    canvas.style.height = maxY;
+//     const canvas = document.createElement('canvas');
+//     canvas.className = 'balls-canvas';
+//     canvas.width = maxX * 2;
+//     canvas.height = maxY * 2;
+//     canvas.style.width = maxX;
+//     canvas.style.height = maxY;
 
-    const parent = this.node.parentNode.parentNode; // I am ashamed
+//     const parent = this.node.parentNode.parentNode; // I am ashamed
 
-    parent.insertBefore(canvas, parent.childNode);
+//     parent.insertBefore(canvas, parent.childNode);
 
-    this.canvas = canvas;
+//     this.canvas = canvas;
 
-    const context = this.canvas.getContext('2d');
+//     const context = this.canvas.getContext('2d');
 
-    context.scale(2, 2);
+//     context.scale(2, 2);
 
-    setTimeout(() => {
-      this.interval = window.setInterval(() => {
-        this.drawEmoji(context, emoji, maxX, maxY);
-      }, 250);
-    }, 2000);
-  }
+//     setTimeout(() => {
+//       this.interval = window.setInterval(() => {
+//         this.drawEmoji(context, emoji, maxX, maxY);
+//       }, 250);
+//     }, 2000);
+//   }
 
-  componentWillUnmount() {
-    const context = this.canvas.getContext('2d');
-    context.clearRect(0, 0, this.canvas.width, this.canvas.height);
-    window.clearInterval(this.interval);
-  }
+//   componentWillUnmount() {
+//     const context = this.canvas.getContext('2d');
+//     context.clearRect(0, 0, this.canvas.width, this.canvas.height);
+//     window.clearInterval(this.interval);
+//   }
 
-  drawEmoji(context, emojiBank, maxX, maxY) {
-    const [x, y] = [maxX, maxY].map(value => Math.floor(Math.random() * value));
-    const char = emojiBank[Math.floor(Math.random() * emojiBank.length)];
+//   drawEmoji(context, emojiBank, maxX, maxY) {
+//     const [x, y] = [maxX, maxY].map(value => Math.floor(Math.random() * value));
+//     const char = emojiBank[Math.floor(Math.random() * emojiBank.length)];
 
-    context.font = '128px Montserrat';
+//     context.font = '128px Montserrat';
 
-    context.fillText(char, x, y);
-  }
+//     context.fillText(char, x, y);
+//   }
 
-  render() {
-    return (
-      <div ref={node => this.node = node}>
-        <Heading size={1} caps fit style={{ zIndex: 1,  position: 'relative' }} textColor="white">Baller</Heading>
-        <Heading size={1} caps fit style={{ zIndex: 1,  position: 'relative' }} textColor="white">Things</Heading>
-      </div>
-    );
-  }
-}
+//   render() {
+//     return (
+//       <div ref={node => this.node = node}>
+//         <Heading size={1} caps fit style={{ zIndex: 1,  position: 'relative' }} textColor="white">Baller</Heading>
+//         <Heading size={1} caps fit style={{ zIndex: 1,  position: 'relative' }} textColor="white">Things</Heading>
+//       </div>
+//     );
+//   }
+// }
 
-BallerThings.Props = {
-  bgColor: 'black'
-};
+// BallerThings.Props = {
+//   bgColor: 'black'
+// };
