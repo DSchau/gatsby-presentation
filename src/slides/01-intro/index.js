@@ -16,7 +16,7 @@ import { Logo as ObjectPartnersLogo } from '@objectpartners/components';
 
 import preloader from 'spectacle/lib/utils/preloader';
 
-import { GatsbyLogo } from '../../components';
+import { GatsbyLogo, QuoteSlide } from '../../components';
 
 const images = {
   intro: require('./assets/cover-optimized.jpg'),
@@ -142,6 +142,14 @@ I'm a frontend developer who likes to claim that I specialize in all things Java
 
 I work for an awesome company called Object Partners. We have offices in Minneapolis and Omaha, and about 100 senior developers between both offices.
   `
+};
+
+export const ManningEarlyAccess = () => (
+  <QuoteSlide author="Manning Publications" href="https://twitter.com/ManningBooks/status/1027182389183696898" image={require('./assets/manning-optimized.jpg')} quote={`Beef up your #webdev skill set with our new #liveVideo course CSS in JavaScript with @SchauDustin. Take 50% off purchase price with code vlschautw today and tomorrow at bit.ly/2M9m63g`.trim()} />
+);
+
+ManningEarlyAccess.Props = {
+  bgColor: 'black'
 };
 
 export const ObjectPartners = () => (

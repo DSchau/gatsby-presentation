@@ -4,6 +4,8 @@ import TwitterIcon from 'react-icons/lib/fa/twitter';
 import GithubIcon from 'react-icons/lib/fa/github';
 import WebsiteIcon from 'react-icons/lib/fa/globe';
 
+import { Image } from 'spectacle';
+
 const images = {
   thankYou: 'https://media.giphy.com/media/KJ1f5iTl4Oo7u/giphy.gif'
 };
@@ -21,6 +23,14 @@ PerfMatters.Props = {
   bgColor: 'black'
 };
 
+export const GatsbyIsMyJam = () => (
+  <Image src={require('./images/gatsby-is-my-jam-optimized.jpg')} style={{ maxHeight: '50vh' }}/>
+);
+
+GatsbyIsMyJam.Props = {
+  bgColor: 'white'
+};
+
 export const Links = () => (
   <div>
     <Heading size={2} caps textColor="white">
@@ -28,7 +38,9 @@ export const Links = () => (
     </Heading>
     <List>
       {[
-        ['The Cost of JavaScript in 2018', 'https://medium.com/@addyosmani/the-cost-of-javascript-in-2018-7d8950fbb5d4']
+        ['The Cost of JavaScript in 2018', 'https://medium.com/@addyosmani/the-cost-of-javascript-in-2018-7d8950fbb5d4'],
+        ['The Cost of Javascript [2017]', 'https://medium.com/dev-channel/the-cost-of-javascript-84009f51e99e'],
+        ['MidwestJS Gatsby (Source)', 'https://github.com/dschau/midwestjs']
       ].map(([title, href]) => {
         const Icon = href.includes('github.com') ? GithubIcon : WebsiteIcon;
         return (

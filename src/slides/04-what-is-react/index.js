@@ -90,7 +90,7 @@ import React from 'react';
 
 import { Content, Footer, Header } from './components';
 
-function App() {
+export default function App() {
   return (
     <Header />
     <Content />
@@ -101,5 +101,41 @@ function App() {
 );
 
 Components.Props = {
+  bgColor: 'code'
+};
+
+export const StaticallyRenderedReact = () => (
+  <CodePane lang="jsx" theme="external" source={`
+import ReactDOMServer from 'react-dom/server';
+
+import App from './app';
+
+const html = ReactDOMServer.renderToString(<App />);
+
+// write, use, etc.
+  `.trim()} textSize={32} />
+);
+
+StaticallyRenderedReact.Props = {
+  bgColor: 'code'
+};
+
+export const StaticHtml = () => (
+  <CodePane theme="external" lang="html" source={`
+<div id="root">
+  <header>
+    <h1>Remember HTML? Pepperidge Farm Remembers</h1>
+  </header>
+  <main>
+    <p>This content is mind blowing</p>
+  </main>
+  <footer>
+    <p>Copyright &copy; 1997 Probably</p>
+  </footer>
+</div>
+  `.trim()} textSize={32} />
+);
+
+StaticHtml.Props = {
   bgColor: 'code'
 };
