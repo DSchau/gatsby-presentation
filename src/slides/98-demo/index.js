@@ -94,7 +94,7 @@ export const HowDidItGo = () => (
 
 export const Well = () => (
   <div>
-    <Heading size={2} caps fit textColor="white">omg yes</Heading>
+    <Heading size={2} caps fit textColor="white">🎉 omfg yes 🎉</Heading>
     <GoToAction render={goTo => (
       <Fill style={{ margin: '1rem' }}><Button onClick={() => goTo('performance-matters')}>➡️</Button></Fill>
     )} />
@@ -116,6 +116,6 @@ export const Poorly = () => (
 );
 
 Poorly.Props = {
-  bgColor: 'red',
+  bgColor: '#b30000',
   id: 'poorly'
 };

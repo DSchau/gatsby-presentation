@@ -1,5 +1,7 @@
 import React from 'react';
 import { Heading, Link, List, ListItem } from 'spectacle';
+import styled from 'react-emotion';
+
 import TwitterIcon from 'react-icons/lib/fa/twitter';
 import GithubIcon from 'react-icons/lib/fa/github';
 import WebsiteIcon from 'react-icons/lib/fa/globe';
@@ -9,6 +11,14 @@ import { Image } from 'spectacle';
 const images = {
   thankYou: 'https://media.giphy.com/media/KJ1f5iTl4Oo7u/giphy.gif'
 };
+
+const Grid = styled('div')({
+  display: 'grid',
+  gridTemplateColumns: '100%',
+  '@media only screen and (min-width: 768px)': {
+    gridTemplateColumns: '50% 50%'
+  }
+});
 
 export const PerfMatters = () => (
   <div>
@@ -31,6 +41,30 @@ GatsbyIsMyJam.Props = {
   bgColor: 'white'
 };
 
+export const DemoLinks = () => (
+  <div>
+    <Grid>
+      {
+        [
+          ['https://github.com/DSchau/midwestjs', require('./images/midwestjs-optimized.jpg')],
+          ['https://github.com/DSchau/gatsby-blog-starter-kit', require('./images/blog-starter-kit-optimized.jpg')],
+          ['https://github.com/DSchau/blog', require('./images/blog-optimized.jpg')],
+          ['https://github.com/DSchau/cfps', require('./images/proposals-optimized.jpg')],
+        ]
+          .map(([href, img]) => (
+              <Link key={href} href={href} target="_blank" rel="noopener" style={{ display: 'flex', alignItems: 'baseline', height: '100%' }}>
+                <Image src={img} style={{ maxHeight: 'initial' }}/>
+              </Link>
+          ))
+      }
+    </Grid>
+  </div>
+);
+
+DemoLinks.Props = {
+  bgColor: 'white'
+};
+
 export const Links = () => (
   <div>
     <Heading size={2} caps textColor="white">
@@ -40,7 +74,7 @@ export const Links = () => (
       {[
         ['The Cost of JavaScript in 2018', 'https://medium.com/@addyosmani/the-cost-of-javascript-in-2018-7d8950fbb5d4'],
         ['The Cost of Javascript [2017]', 'https://medium.com/dev-channel/the-cost-of-javascript-84009f51e99e'],
-        ['MidwestJS Gatsby (Source)', 'https://github.com/dschau/midwestjs']
+        ['The Future of JavaScript', 'https://slides.com/seldo/future-of-javascript#/']
       ].map(([title, href]) => {
         const Icon = href.includes('github.com') ? GithubIcon : WebsiteIcon;
         return (
@@ -53,9 +87,10 @@ export const Links = () => (
               listStyleType: 'none',
               margin: '1rem 0'
             }}
+            fit
           >
             <Icon color="white" style={{ marginRight: '1rem' }} />
-            <Link href={href} target="_blank" textColor="white">
+            <Link href={href} target="_blank" textColor="white" fit>
               {title}
             </Link>
           </ListItem>

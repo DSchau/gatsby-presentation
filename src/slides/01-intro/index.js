@@ -6,7 +6,8 @@ import {
   Image,
   Layout,
   Link,
-  S as Span
+  S as Span,
+  Text
 } from 'spectacle';
 import TwitterIcon from 'react-icons/lib/fa/twitter';
 import GithubIcon from 'react-icons/lib/fa/github';
@@ -20,7 +21,8 @@ import { GatsbyLogo, QuoteSlide } from '../../components';
 
 const images = {
   intro: require('./assets/cover-optimized.jpg'),
-  me: require('./assets/me-optimized.jpg')
+  me: require('./assets/me-optimized.jpg'),
+  midwestjs: require('./assets/midwestjs-optimized.png')
 };
 
 preloader(images);
@@ -73,6 +75,10 @@ export const Intro = () => (
       >
         https://gatsby.dustinschau.com
       </Link>
+    </div>
+    <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', marginTop: '1rem' }}>
+      <Image src={images.midwestjs} style={{ margin: '0.5rem', display: 'inline-block', height: 32, width: 32 }}/>
+      <Text textColor="rgba(255, 255, 255, 0.75)" textSize={16} style={{ display: 'inline', margin: '0.5rem' }}>August 10th, 2018</Text>
     </div>
   </div>
 );
