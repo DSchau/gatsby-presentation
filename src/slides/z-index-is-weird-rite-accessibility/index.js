@@ -25,6 +25,10 @@ export const EverSeenAButton = () => (
       `.trim()} textSize={32} />
     </div>);
 
+EverSeenAButton.Props = {
+  bgColor: 'code'
+};
+
 export const MeToo = () => (
   <div>
     <Button>same</Button>
@@ -33,6 +37,10 @@ export const MeToo = () => (
     `.trim()} textSize={32} />
   </div>
 );
+
+MeToo.Props = {
+  bgColor: 'code'
+};
 
 export const DoNotDoThis = () => (
   <div>
