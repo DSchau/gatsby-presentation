@@ -78,7 +78,7 @@ export const Intro = () => (
     </div>
     <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', marginTop: '1rem' }}>
       <Image src={images.midwestjs} style={{ margin: '0.5rem', display: 'inline-block', height: 32, width: 32 }}/>
-      <Text textColor="rgba(255, 255, 255, 0.75)" textSize={16} style={{ display: 'inline', margin: '0.5rem' }}>August 10th, 2018</Text>
+      <Text textColor="rgba(255, 255, 255, 0.75)" textSize={16} style={{ display: 'inline', margin: '0.5rem' }}>{process.env.PRESENTATION_DATE}</Text>
     </div>
   </div>
 );
