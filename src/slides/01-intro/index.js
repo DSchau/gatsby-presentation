@@ -22,20 +22,18 @@ import { GatsbyLogo, QuoteSlide } from '../../components';
 const images = {
   intro: require('./assets/cover-optimized.jpg'),
   me: require('./assets/me-optimized.jpg'),
-  midwestjs: require('./assets/midwestjs-optimized.png')
+  dsmjs: require('./assets/dsmjs-optimized.png')
 };
 
 preloader(images);
 
 export const Intro = () => (
   <div>
-    <div
-    >
+    <div>
       <Link
         href="https://www.meetup.com/nebraskajs/events/dxndfdyxhbcb/"
         target="_blank"
-      >
-      </Link>
+      />
     </div>
     <Heading
       size={1}
@@ -76,9 +74,30 @@ export const Intro = () => (
         https://gatsby.dustinschau.com
       </Link>
     </div>
-    <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', marginTop: '1rem' }}>
-      <Image src={images.midwestjs} style={{ margin: '0.5rem', display: 'inline-block', height: 32, width: 32 }}/>
-      <Text textColor="rgba(255, 255, 255, 0.75)" textSize={16} style={{ display: 'inline', margin: '0.5rem' }}>{process.env.REACT_APP_PRESENTATION_DATE}</Text>
+    <div
+      style={{
+        display: 'flex',
+        alignItems: 'center',
+        justifyContent: 'center',
+        marginTop: '1rem'
+      }}
+    >
+      <Image
+        src={images.dsmjs}
+        style={{
+          margin: '0.5rem',
+          display: 'inline-block',
+          height: 32,
+          width: 32
+        }}
+      />
+      <Text
+        textColor="rgba(255, 255, 255, 0.75)"
+        textSize={16}
+        style={{ display: 'inline', margin: '0.5rem' }}
+      >
+        {process.env.REACT_APP_PRESENTATION_DATE}
+      </Text>
     </div>
   </div>
 );
@@ -150,19 +169,25 @@ I work for an awesome company called Object Partners. We have offices in Minneap
   `
 };
 
-export const ManningEarlyAccess = () => (
-  <QuoteSlide author="Manning Publications" href="https://twitter.com/ManningBooks/status/1027182389183696898" image={require('./assets/manning-optimized.jpg')} quote={`Beef up your #webdev skill set with our new #liveVideo course CSS in JavaScript with @SchauDustin. Take 50% off purchase price with code vlschautw today and tomorrow at bit.ly/2M9m63g`.trim()} />
+export const IdaGrove = () => (
+  <div>
+    <Heading size={2} caps fit textColor="white">
+      I'm from Iowa
+    </Heading>
+    <Image
+      src={require('./assets/ida-grove-map-optimized.png')}
+      style={{ maxHeight: 250 }}
+    />
+  </div>
 );
 
-ManningEarlyAccess.Props = {
-  bgColor: 'black'
+IdaGrove.Props = {
+  bgImage: require('./assets/ida-grove-optimized.jpg'),
+  bgDarken: 0.5
 };
 
-export const ObjectPartners = () => (
-  <ObjectPartnersLogo style={{ height: 'auto', width: 'auto' }} />
-);
+export const IWorkForGatsby = () => <GatsbyLogo />;
 
-ObjectPartners.Props = {
-  bgImage: require('./assets/objectpartners-optimized.jpg'),
+IWorkForGatsby.Props = {
   bgDarken: 0.5
 };

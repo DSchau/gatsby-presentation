@@ -5,7 +5,6 @@ import marked from 'marked';
 import dasherize from 'lodash.kebabcase';
 
 import * as Intro from './01-intro';
-import * as Accessibility from './z-index-is-weird-rite-accessibility';
 import * as BlazingFast from './02-blazing-fast';
 import * as WhatIsAStaticSite from './03-what-is-a-static-site';
 import * as WhatIsReact from './04-what-is-react';
@@ -17,7 +16,6 @@ import * as Conclusion from './99-conclusion';
 export default function makeSlides() {
   return [
     Intro,
-    Accessibility,
     BlazingFast,
     WhatIsAStaticSite,
     WhatIsReact,
