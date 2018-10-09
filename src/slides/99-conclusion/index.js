@@ -6,7 +6,7 @@ import TwitterIcon from 'react-icons/lib/fa/twitter';
 import GithubIcon from 'react-icons/lib/fa/github';
 import WebsiteIcon from 'react-icons/lib/fa/globe';
 
-import { Image } from 'spectacle';
+import { Code, Image, S as Span } from 'spectacle';
 
 const images = {
   thankYou: 'https://media.giphy.com/media/KJ1f5iTl4Oo7u/giphy.gif'
@@ -22,9 +22,15 @@ const Grid = styled('div')({
 
 export const PerfMatters = () => (
   <div>
-    <Heading size={1} caps fit textColor="white">Perf.</Heading>
-    <Heading size={1} caps fit textColor="white">Matters</Heading>
-    <Heading size={2} fit textColor="white">(aka give a shit)</Heading>
+    <Heading size={1} caps fit textColor="white">
+      Perf.
+    </Heading>
+    <Heading size={1} caps fit textColor="white">
+      Matters
+    </Heading>
+    <Heading size={2} fit textColor="white">
+      (aka give a shit)
+    </Heading>
   </div>
 );
 
@@ -34,7 +40,10 @@ PerfMatters.Props = {
 };
 
 export const GatsbyIsMyJam = () => (
-  <Image src={require('./images/gatsby-is-my-jam-optimized.jpg')} style={{ maxHeight: '50vh' }}/>
+  <Image
+    src={require('./images/gatsby-is-my-jam-optimized.jpg')}
+    style={{ maxHeight: '50vh' }}
+  />
 );
 
 GatsbyIsMyJam.Props = {
@@ -44,19 +53,34 @@ GatsbyIsMyJam.Props = {
 export const DemoLinks = () => (
   <div>
     <Grid>
-      {
+      {[
         [
-          ['https://github.com/DSchau/midwestjs', require('./images/midwestjs-optimized.jpg')],
-          ['https://github.com/DSchau/gatsby-blog-starter-kit', require('./images/blog-starter-kit-optimized.jpg')],
-          ['https://github.com/DSchau/blog', require('./images/blog-optimized.jpg')],
-          ['https://github.com/DSchau/cfps', require('./images/proposals-optimized.jpg')],
+          'https://github.com/DSchau/midwestjs',
+          require('./images/midwestjs-optimized.jpg')
+        ],
+        [
+          'https://github.com/DSchau/gatsby-blog-starter-kit',
+          require('./images/blog-starter-kit-optimized.jpg')
+        ],
+        [
+          'https://github.com/DSchau/blog',
+          require('./images/blog-optimized.jpg')
+        ],
+        [
+          'https://github.com/DSchau/cfps',
+          require('./images/proposals-optimized.jpg')
         ]
-          .map(([href, img]) => (
-              <Link key={href} href={href} target="_blank" rel="noopener" style={{ display: 'flex', alignItems: 'baseline', height: '100%' }}>
-                <Image src={img} style={{ maxHeight: 'initial' }}/>
-              </Link>
-          ))
-      }
+      ].map(([href, img]) => (
+        <Link
+          key={href}
+          href={href}
+          target="_blank"
+          rel="noopener"
+          style={{ display: 'flex', alignItems: 'baseline', height: '100%' }}
+        >
+          <Image src={img} style={{ maxHeight: 'initial' }} />
+        </Link>
+      ))}
     </Grid>
   </div>
 );
@@ -72,9 +96,18 @@ export const Links = () => (
     </Heading>
     <List>
       {[
-        ['The Cost of JavaScript in 2018', 'https://medium.com/@addyosmani/the-cost-of-javascript-in-2018-7d8950fbb5d4'],
-        ['The Cost of Javascript [2017]', 'https://medium.com/dev-channel/the-cost-of-javascript-84009f51e99e'],
-        ['The Future of JavaScript', 'https://slides.com/seldo/future-of-javascript#/']
+        [
+          'The Cost of JavaScript in 2018',
+          'https://medium.com/@addyosmani/the-cost-of-javascript-in-2018-7d8950fbb5d4'
+        ],
+        [
+          'The Cost of Javascript [2017]',
+          'https://medium.com/dev-channel/the-cost-of-javascript-84009f51e99e'
+        ],
+        [
+          'The Future of JavaScript',
+          'https://slides.com/seldo/future-of-javascript#/'
+        ]
       ].map(([title, href]) => {
         const Icon = href.includes('github.com') ? GithubIcon : WebsiteIcon;
         return (
@@ -108,6 +141,43 @@ Links.Props = {
 Check out some of these links to view the repos and/or live demonstration sites of the Gatsby functionality!
 
   `
+};
+
+export const SWAG = () => (
+  <div>
+    {['Stuff', 'We', 'All', 'Get'].map(part => (
+      <Heading size={1} key={part} textColor="white">
+        <Span type="underline">{part.slice(0, 1)}</Span>
+        {part.slice(1)}
+      </Heading>
+    ))}
+  </div>
+);
+
+SWAG.Props = {
+  bgColor: `black`
+};
+
+export const SwagCode = () => (
+  <div>
+    <Code textSize={128} textColor="white" style={{ marginBottom: `2rem` }}>
+      GATSBYPROMO
+    </Code>
+    <Link
+      style={{ display: `block` }}
+      rel="noopener"
+      target="_blank"
+      href="https://store.gatsbyjs.org"
+      textSize={64}
+      textColor="white"
+    >
+      https://store.gatsbyjs.org
+    </Link>
+  </div>
+);
+
+SwagCode.Props = {
+  bgColor: `black`
 };
 
 export const FinTheEndThatsAllFolks = () => (

@@ -82,6 +82,21 @@ I've created (and open sourced!) some demos and repositories to illustrate some 
 `
 };
 
+export const Caveat = () => (
+  <React.Fragment>
+    <Heading size={2} caps fit textColor="black">
+      <Span type="italic">alpha</Span> software
+    </Heading>
+    <Heading size={6} fit textColor="black" style={{ marginTop: '4rem' }}>
+      There <Span type="italic">might</Span> be 🐉
+    </Heading>
+  </React.Fragment>
+);
+
+Caveat.Props = {
+  bgColor: '#ffd400'
+};
+
 export const NewHotness = () => (
   <Link href="https://midwestjs.netlify.com" target="_blank" rel="noopener">
     <Image
