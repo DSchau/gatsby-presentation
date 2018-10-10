@@ -143,43 +143,6 @@ Check out some of these links to view the repos and/or live demonstration sites 
   `
 };
 
-export const SWAG = () => (
-  <div>
-    {['Stuff', 'We', 'All', 'Get'].map(part => (
-      <Heading size={1} key={part} textColor="white">
-        <Span type="underline">{part.slice(0, 1)}</Span>
-        {part.slice(1)}
-      </Heading>
-    ))}
-  </div>
-);
-
-SWAG.Props = {
-  bgColor: `black`
-};
-
-export const SwagCode = () => (
-  <div>
-    <Code textSize={128} textColor="white" style={{ marginBottom: `2rem` }}>
-      GATSBYPROMO
-    </Code>
-    <Link
-      style={{ display: `block` }}
-      rel="noopener"
-      target="_blank"
-      href="https://store.gatsbyjs.org"
-      textSize={64}
-      textColor="white"
-    >
-      https://store.gatsbyjs.org
-    </Link>
-  </div>
-);
-
-SwagCode.Props = {
-  bgColor: `black`
-};
-
 export const FinTheEndThatsAllFolks = () => (
   <div
     style={{
