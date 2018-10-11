@@ -61,7 +61,7 @@ export const AppGeneratorPSA = () => (
     <BlockQuote textSize={48} textColor="white">
       @gatsbyjs is not just for "sites". It produces static HTML and then
       rehydrates into a React app.
-      <Cite>Kyle Matthews (Creator of Gatsby)</Cite>
+      <Cite>Kyle Mathews (Creator of Gatsby)</Cite>
     </BlockQuote>
   </div>
 );
