@@ -38,17 +38,17 @@ export default class Presentation extends Component {
     this.history.listen(() => {
       this.addParticles();
     });
-    
+
     this.addParticles();
   }
 
   addParticles(hash = window.location.hash) {
     requestAnimationFrame(() => {
-      const [,slideHash] = hash.split('/');
+      const [, slideHash] = hash.split('/');
       if (!slideHash || slideHash === '0') {
         document.querySelector('.spectacle-slide').id = 'spectacle-slide';
         Particles('spectacle-slide', particlesConfig);
-      } 
+      }
     });
   }
 
@@ -56,7 +56,7 @@ export default class Presentation extends Component {
     return (
       <Deck
         progress="bar"
-        transition={['slide']}
+        transition={[]}
         transitionDuration={500}
         theme={theme}
       >
