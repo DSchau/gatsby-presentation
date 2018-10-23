@@ -77,20 +77,15 @@ export const Intro = () => (
     <div
       style={{
         display: 'flex',
+        flexDirection: 'column',
         alignItems: 'center',
         justifyContent: 'center',
         marginTop: '1rem'
       }}
     >
-      <Image
-        src={images.dsmjs}
-        style={{
-          margin: '0.5rem',
-          display: 'inline-block',
-          height: 32,
-          width: 32
-        }}
-      />
+      <Text textColor="#F0DB4F" textSize={24}>
+        JavaScript KC
+      </Text>
       <Text
         textColor="rgba(255, 255, 255, 0.75)"
         textSize={16}
@@ -167,23 +162,6 @@ I'm a frontend developer who likes to claim that I specialize in all things Java
 
 I work for an awesome company called Object Partners. We have offices in Minneapolis and Omaha, and about 100 senior developers between both offices.
   `
-};
-
-export const IdaGrove = () => (
-  <div>
-    <Heading size={2} caps fit textColor="white">
-      I'm from Iowa
-    </Heading>
-    <Image
-      src={require('./assets/ida-grove-map-optimized.png')}
-      style={{ maxHeight: 250 }}
-    />
-  </div>
-);
-
-IdaGrove.Props = {
-  bgImage: require('./assets/ida-grove-optimized.jpg'),
-  bgDarken: 0.5
 };
 
 export const IWorkForGatsby = () => <GatsbyLogo />;
