@@ -28,22 +28,20 @@ const Grid = styled('div')({
 export function BlazingFastSsgReact() {
   return (
     <div>
-      {['Blazing fast', 'static site generation', '__for__', 'React'].map(
-        text => {
-          if (text.includes('__')) {
-            return (
-              <Heading size={3} textColor="white" key={text}>
-                {text.replace(/_/g, '')}
-              </Heading>
-            );
-          }
+      {['Blazing fast', 'app generator', '__for__', 'React'].map(text => {
+        if (text.includes('__')) {
           return (
-            <Heading size={1} textColor="white" caps fit key={text}>
-              <Span type="underline">{text}</Span>
+            <Heading size={3} textColor="white" key={text}>
+              {text.replace(/_/g, '')}
             </Heading>
           );
         }
-      )}
+        return (
+          <Heading size={1} textColor="white" caps fit key={text}>
+            <Span type="underline">{text}</Span>
+          </Heading>
+        );
+      })}
     </div>
   );
 }
