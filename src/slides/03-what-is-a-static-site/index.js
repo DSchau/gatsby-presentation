@@ -1,17 +1,6 @@
 import React from 'react';
-import styled from 'react-emotion';
 
-import {
-  Appear,
-  CodePane,
-  Quote,
-  Heading,
-  Fill,
-  Image,
-  Layout,
-  Link,
-  S as Span
-} from 'spectacle';
+import { CodePane, Heading, Image, S as Span } from 'spectacle';
 
 import { Emoji, QuoteSlide, Source } from '../../components';
 
