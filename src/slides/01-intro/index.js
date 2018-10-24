@@ -84,7 +84,7 @@ export const Intro = () => (
       }}
     >
       <Text textColor="#F0DB4F" textSize={24}>
-        JavaScript KC
+        Kansas City React
       </Text>
       <Text
         textColor="rgba(255, 255, 255, 0.75)"
