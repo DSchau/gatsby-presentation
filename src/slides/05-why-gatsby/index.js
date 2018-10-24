@@ -144,7 +144,6 @@ import { Formik } from 'formik';
 import yup from 'yup';
 
 export default function ContactPage() {
-  // you get the idea
   return (
     <Formik yadda={true} yaddaYadda={true} />
   );
